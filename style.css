@@ -1,4 +1,5 @@
- {
+/* Resetando margens e paddings */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,30 +11,47 @@ body {
   background-color: #e6f2e6;
   color: #333;
   padding: 20px;
+  background-image: url(https://images.app.goo.gl/VM3ckh2QQbkKbPVMA);
+  background-size: cover;
+  background-position: center;
 }
 
 header {
-  background-color: #2e8b57;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  background-color: rgba(46, 139, 87, 0.8);
+  color: white;
   text-align: center;
+}
+
+header .logo h1 {
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 nav ul {
   list-style: none;
-  margin-top: 10px;
+  display: flex;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
 }
 
+nav ul li a:hover {
+  color: #ffbf00;
+}
+
+/* Seções principais */
 main {
   margin-top: 30px;
 }
@@ -42,10 +60,59 @@ section {
   margin-bottom: 40px;
 }
 
+section h2 {
+  font-size: 2em;
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Galeria */
+.galeria-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.galeria-item {
+  flex: 1;
+  max-width: 30%;
+  margin-bottom: 20px;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #2e8b57;
+  background-color: rgba(46, 139, 87, 0.8);
   color: white;
   margin-top: 40px;
+}
+
+footer .social {
+  margin-top: 15px;
+}
+
+footer .social a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #ffbf00;
 }
